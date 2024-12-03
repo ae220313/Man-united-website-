@@ -1,80 +1,71 @@
-              <html>
+<!DOCTYPE html>
+<html lang="en">
 <head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
   <style>
-     body{
-         text-align: center;
-         background-image: linear-gradient(rgb(13, 175, 177), rgb(222, 222, 222));
-         min-width: 100%;
-         min-height: 100%;
-      }
+    body {
+      text-align: center;
+   background-image: linear-gradient(rgb(218, 14, 14), rgb(236, 168, 1));
+; /* Restored original background */
+      min-width: 100%;
+      min-height: 100%;
+      font-family: Arial, sans-serif;
+    }
+    
+    #myBtn {
+      display: none;
+      position: fixed;
+      bottom: 20px;
+      right: 30px;
+      z-index: 99;
+      background-color: #007BFF;
+      color: white;
+      border: none;
+      border-radius: 50%;
+      padding: 15px;
+      font-size: 18px;
+      cursor: pointer;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    }
+    
+    #myBtn:hover {
+      background-color: #0056b3;
+    }
   </style>
 </head>
-
 <body>
 
-<h1><marquee>Man UTD</marquee></h1>
-
-
+<em><h1><marquee>Man UTD</marquee></h1></em><h1>
 <h4>About the club</h4>
-
-
 <h5>Manchester United is one of the most successful and storied football clubs in the world, with a rich history of domestic and international triumphs. Founded in 1878, the club has won numerous Premier League titles, FA Cups, and UEFA Champions League trophies. Known for its iconic stadium, Old Trafford, Manchester United has a massive global fanbase and is a key player in English football. Despite facing challenges in recent years, the club continues to be a powerhouse, attracting top talent and striving for future success.</h5>
-</body>
 
+<h3>Here is a video:</h3>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/S3ffh04YOZk?si=EGhBPzL_Nvf-Fi6P" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 
-<h3>here is a video  <iframe width="560" height="315" src="https://www.youtube.com/embed/S3ffh04YOZk?si=EGhBPzL_Nvf-Fi6P" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe></h3>
-</html><html>
-<head>
-  <style>
-     body{
-         text-align: center;
-         background-image: linear-gradient(rgb(218, 0, 0), rgb(232, 208, 02));
-         min-width: 100%;
-         min-height: 100%;
-                 
-            <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Back to Top Button</title>
-    <link rel="stylesheet" href="style.css">
-</head>
-<body>
+<!-- Back to Top Button -->
+<button onclick="topFunction()" id="myBtn" title="Go to top">Top</button>
 
-    <div style="height: 1500px;">
-        <h1>Scroll down the page</h1>
-        <p>Content goes here...</p>
-    </div>
+<script>
+// Get the button
+let mybutton = document.getElementById("myBtn");
 
-    <!-- Back to Top Button -->
-    <button id="backToTop" class="back-to-top">↑ Back to Top</button>
+// When the user scrolls down 20px from the top of the document, show the button
+window.onscroll = function () {
+  if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+    mybutton.style.display = "block";
+  } else {
+    mybutton.style.display = "none";
+  }
+};
 
-    <script src="script.js"></script>
-</body>
-</html>
-
- body {
-    font-family: Arial, sans-serif;
-    padding: 0;
-    margin: 0;
-
-                 
-                 
-                 
-                 
+// When the user clicks on the button, scroll to the top of the document
+function topFunction() {
+  document.body.scrollTop = 0; // For Safari
+  document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera
 }
-
-  </s
-  tyle>
-</head>
-
-<body>
-
-
-
+</script>
 
 </body>
-
 </html>
-
-       
