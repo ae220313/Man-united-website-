@@ -155,6 +155,34 @@
       transform: scale(0.9);
     }
 
+    /* Dark Mode Styles */
+    .dark-mode {
+      background-image: linear-gradient(rgb(0, 0, 0), rgb(34, 34, 34));
+      color: white;
+    }
+
+    .dark-mode h1, .dark-mode h4, .dark-mode h5 {
+      text-shadow: 0 0 10px #ffffff, 0 0 20px #ffffff, 0 0 30px #ffffff; /* Softer white glow for dark mode */
+    }
+
+    /* Dark Mode Button */
+    #darkModeBtn {
+      position: fixed;
+      top: 20px;
+      right: 20px;
+      background-color: black; /* Black button */
+      color: white; /* White text */
+      border: none;
+      border-radius: 50%;
+      padding: 10px 20px;
+      font-size: 18px;
+      cursor: pointer;
+      z-index: 100;
+      box-shadow: 0 0 10px #ffffff;
+    }
+    #darkModeBtn:hover {
+      background-color: #444; /* Darker shade on hover */
+    }
   </style>
 </head>
 <body>
@@ -182,6 +210,9 @@
   <img src="https://w7.pngwing.com/pngs/997/289/png-transparent-manchester-united-logo-food-text-sport.png" alt="Manchester United Logo">
 </div>
 
+<!-- Dark Mode Toggle Button -->
+<button id="darkModeBtn" onclick="toggleDarkMode()">Toggle Dark Mode</button>
+
 <script>
 // Get the button
 let mybutton = document.getElementById("myBtn");
@@ -200,6 +231,24 @@ function topFunction() {
   document.body.scrollTop = 0; // For Safari
   document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE, and Opera
 }
+
+// Dark Mode Toggle Function
+function toggleDarkMode() {
+  document.body.classList.toggle('dark-mode'); // Toggle dark mode class on body
+  if (document.body.classList.contains('dark-mode')) {
+    localStorage.setItem('theme', 'dark'); // Save dark mode to localStorage
+  } else {
+    localStorage.setItem('theme', 'light'); // Save light mode to localStorage
+  }
+}
+
+// Load saved theme from localStorage
+window.onload = function() {
+  const theme = localStorage.getItem('theme');
+  if (theme === 'dark') {
+    document.body.classList.add('dark-mode'); // Apply dark mode if saved in localStorage
+  }
+};
 </script>
 
 <button class="bn30" onclick="window.location.href='https://www.manutd.com/'">Official Manchester United Website</button>
