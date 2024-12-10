@@ -1,4 +1,3 @@
-<!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8">
@@ -7,12 +6,42 @@
   <style>
     body {
       text-align: center;
-      background-image: linear-gradient(rgb(218, 14, 14), rgb(236, 168, 1)); /* Restored original background */
+      background-image: linear-gradient(rgb(218, 14, 14), rgb(236, 168, 1)); /* Background */
       min-width: 100%;
       min-height: 100%;
       font-family: Arial, sans-serif;
+      color: black; /* Default text color to black */
     }
-    
+
+    /* Less Intense Glowing Text Effect for h1, h4, h5 */
+    h1, h4, h5 {
+      color: black; /* Set text color to black */
+      text-shadow: 
+        0 0 10px #ffffff,  /* Soft white glow */
+        0 0 20px #ffffff,  /* Mild glow */
+        0 0 30px #ffffff;  /* Slightly larger but soft glow */
+    }
+
+    h1 {
+      font-size: 72px; /* Make the header text larger */
+      font-weight: bold;
+      border: 5px solid darkred; /* Deep red border */
+      padding: 20px;
+      margin-bottom: 20px;
+      border-radius: 10px;
+      box-shadow: 0 0 10px #ffffff, 0 0 20px #ffffff, 0 0 30px #ffffff; /* Softer glowing effect */
+    }
+
+    h4, h5 {
+      font-size: 24px; /* Adjusted size for h4 and h5 */
+      border: 5px solid darkred; /* Deep red border */
+      padding: 20px;
+      margin-bottom: 20px;
+      border-radius: 10px;
+      box-shadow: 0 0 10px #ffffff, 0 0 20px #ffffff, 0 0 30px #ffffff; /* Softer glowing effect */
+    }
+
+    /* Back to Top Button */
     #myBtn {
       display: none;
       position: fixed;
@@ -26,27 +55,60 @@
       padding: 15px;
       font-size: 18px;
       cursor: pointer;
-      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+      box-shadow: 0 0 10px #ffffff, 0 0 20px #ffffff, 0 0 30px #ffffff; /* Softer glowing effect */
     }
     
     #myBtn:hover {
       background-color: #0056b3;
     }
 
-    /* Glowing effect for headers with longer and more stretched black glow */
-    h1, h4, h5 {
-      color: white; /* White color for text */
-      text-shadow: 
-        0 0 15px #000000,   /* Black glow */
-        0 0 30px #000000,   /* Longer black glow */
-        0 0 60px #000000,   /* Stronger black glow */
-        0 0 90px #000000,   /* Even longer black glow */
-        0 0 120px #000000,  /* Longest black glow */
-        0 0 150px #000000,  /* Stronger longer glow */
-        0 0 200px #000000;  /* Maximum long black glow, extending across the header */
+    /* Styling for the logo section with glowing effect */
+    .logo-section {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin-top: 30px;
+      position: relative;
+      z-index: 10;
+      border: 5px solid darkred; /* Deep red border */
+      padding: 20px;
+      border-radius: 10px;
+      margin-bottom: 20px;
+      box-shadow: 0 0 10px #ffffff, 0 0 20px #ffffff, 0 0 30px #ffffff; /* Softer glowing effect */
     }
 
-    /* Button styles */
+    /* Logo styling */
+    .logo-section img {
+      width: 250px; /* Make the logo bigger */
+      height: auto; /* Maintain aspect ratio */
+      margin-left: 10px; /* Space between text and logo */
+      opacity: 0.9; /* Slight transparency */
+      border-radius: 10px; /* Rounded corners */
+      box-shadow: 0 0 10px #ffffff, 0 0 20px #ffffff, 0 0 30px #ffffff; /* Softer glowing border around the logo */
+      transition: opacity 0.3s, transform 0.3s;
+      background-color: transparent; /* Ensure the background is transparent */
+    }
+
+    .logo-section img:hover {
+      opacity: 1; /* Fully visible on hover */
+      transform: scale(1.1); /* Slight zoom effect on hover */
+    }
+
+    /* Flex container for the link and button to be next to each other */
+    .link-button-container {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 10px; /* Space between the link text and button */
+      margin-top: 20px;
+      border: 5px solid darkred; /* Deep red border */
+      padding: 20px;
+      border-radius: 10px;
+      margin-bottom: 20px;
+      box-shadow: 0 0 10px #ffffff, 0 0 20px #ffffff, 0 0 30px #ffffff; /* Softer glowing effect */
+    }
+
+    /* Button styles without glowing effect */
     button {
       align-items: center;
       background-image: linear-gradient(144deg, #af40ff, #5b42f3 50%, #00ddeb);
@@ -93,25 +155,11 @@
       transform: scale(0.9);
     }
 
-    /* Styling the container for the link and button */
-    .link-button-container {
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      margin-top: 20px;
-    }
-
-    .link-button-container a {
-      text-decoration: none;
-      margin-right: 10px; /* Space between link and button */
-      font-size: 18px;
-      color: white;
-    }
   </style>
 </head>
 <body>
 
-<em><h1><marquee>Man UTD</marquee></em></h1>
+<em><h1><marquee>Man UTD</marquee></h1></em> <!-- This header now glows white -->
 <h4>About the club</h4>
 <h5>Manchester United is one of the most successful and storied football clubs in the world, with a rich history of domestic and international triumphs. Founded in 1878, the club has won numerous Premier League titles, FA Cups, and UEFA Champions League trophies. Known for its iconic stadium, Old Trafford, Manchester United has a massive global fanbase and is a key player in English football. Despite facing challenges in recent years, the club continues to be a powerhouse, attracting top talent and striving for future success.</h5>
 
@@ -121,9 +169,17 @@
 <!-- Back to Top Button -->
 <button onclick="topFunction()" id="myBtn" title="Go to top">Top</button>
 
+<!-- Flex container for text and button -->
 <div class="link-button-container">
-  <h5>You can play with this team or find out more about it by playing the game FC25. Here is the link:</h5>
-  <button class="bn30" onclick="window.location.href='https://www.ea.com/games/ea-sports-fc'">FC25 website</button>
+  <h5>Here is the link to play with this team or find out more about it: </h5>
+  <button class="bn30" onclick="window.location.href='https://www.ea.com/games/ea-sports-fc'">FC25 Website</button>
+</div>
+
+<!-- Manchester United Logo Section -->
+<div class="logo-section">
+  <h5>Here is the logo of Manchester United:</h5>
+  <!-- Ensure the logo link is correct, using a widely available logo image -->
+  <img src="https://w7.pngwing.com/pngs/997/289/png-transparent-manchester-united-logo-food-text-sport.png" alt="Manchester United Logo">
 </div>
 
 <script>
